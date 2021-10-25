@@ -9,7 +9,7 @@ function HelloAce:OnInitialize()
 	-- https://www.wowace.com/projects/ace3/pages/api/ace-db-3-0
 	self.db = LibStub("AceDB-3.0"):New("HelloAceDB", self.defaults, true)
 
-	-- registers an options table and adds it to the Blizzard options panel
+	-- registers an options table and adds it to the Blizzard options window
 	-- https://www.wowace.com/projects/ace3/pages/api/ace-config-registry-3-0
 	ACR:RegisterOptionsTable("HelloAce_Options", self.options)
 	ACD:AddToBlizOptions("HelloAce_Options", "HelloAce (label 1)")

@@ -49,7 +49,7 @@ HelloAce.options = {
 				someDescription = {
 					type = "description",
 					order = 2,
-					name = "Ace3 is neat",
+					name = function() return format("The current time is: |cff71d5ff%s|r", date("%X")) end,
 					fontSize = "large",
 				},
 				someSelect = {
