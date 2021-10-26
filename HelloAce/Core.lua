@@ -22,6 +22,9 @@ function HelloAce:OnInitialize()
 	-- https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0
 	self:RegisterChatCommand("ha", "SlashCommand")
 	self:RegisterChatCommand("helloace", "SlashCommand")
+
+	-- stores character-specific data
+	self.db.char.level = UnitLevel("player")
 end
 
 function HelloAce:OnEnable()
