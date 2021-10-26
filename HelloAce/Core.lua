@@ -23,8 +23,7 @@ function HelloAce:OnInitialize()
 	self:RegisterChatCommand("ha", "SlashCommand")
 	self:RegisterChatCommand("helloace", "SlashCommand")
 
-	-- stores character-specific data
-	self.db.char.level = UnitLevel("player")
+	self:GetCharacterInfo()
 end
 
 function HelloAce:OnEnable()
@@ -39,6 +38,11 @@ end
 function HelloAce:CHAT_MSG_CHANNEL(event, text, ...)
 	-- prints the whole event payload
 	print(event, text, ...)
+end
+
+function HelloAce:GetCharacterInfo()
+	-- stores character-specific data
+	self.db.char.level = UnitLevel("player")
 end
 
 function HelloAce:SlashCommand(input, editbox)
