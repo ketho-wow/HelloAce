@@ -1,7 +1,7 @@
 -- we can mixin more Ace libs here
 HelloAce = LibStub("AceAddon-3.0"):NewAddon("HelloAce", "AceEvent-3.0", "AceConsole-3.0")
 
-local ACR = LibStub("AceConfigRegistry-3.0")
+local AC = LibStub("AceConfig-3.0")
 local ACD = LibStub("AceConfigDialog-3.0")
 
 function HelloAce:OnInitialize()
@@ -11,12 +11,12 @@ function HelloAce:OnInitialize()
 
 	-- registers an options table and adds it to the Blizzard options window
 	-- https://www.wowace.com/projects/ace3/pages/api/ace-config-registry-3-0
-	ACR:RegisterOptionsTable("HelloAce_Options", self.options)
-	ACD:AddToBlizOptions("HelloAce_Options", "HelloAce (label 1)")
+	AC:RegisterOptionsTable("HelloAce_Options", self.options)
+	self.optionsFrame = ACD:AddToBlizOptions("HelloAce_Options", "HelloAce (label 1)")
 
 	-- adds a child options table, in this case our profiles panel
 	local profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db)
-	ACR:RegisterOptionsTable("HelloAce_Profiles", profiles)
+	AC:RegisterOptionsTable("HelloAce_Profiles", profiles)
 	ACD:AddToBlizOptions("HelloAce_Profiles", "Profiles", "HelloAce_Options")
 
 	-- https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0
@@ -55,7 +55,8 @@ function HelloAce:SlashCommand(input, editbox)
 		print("this is our saved message:", self.db.profile.someInput)
 	else
 		self:Print("some useful help message")
-		-- we can also show the options as a standalone window
-		ACD:Open("HelloAce_Options")
+		-- https://github.com/Stanzilla/WoWUIBugs/issues/89
+		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
+		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
 	end
 end
