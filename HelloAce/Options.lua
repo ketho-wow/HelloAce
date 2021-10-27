@@ -64,11 +64,11 @@ HelloAce.options = {
 }
 
 function HelloAce:GetSomeRange(info)
-    return self.db.profile.someRange
+	return self.db.profile.someRange
 end
 
 function HelloAce:SetSomeRange(info, value)
-    self.db.profile.someRange = value
+	self.db.profile.someRange = value
 end
 
 -- https://www.wowace.com/projects/ace3/pages/ace-config-3-0-options-tables#title-4-1

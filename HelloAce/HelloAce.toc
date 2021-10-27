@@ -4,9 +4,8 @@
 ## Notes: Minimal example (with Ace3 libs hard embedded)
 ## Author: Ketho
 ## SavedVariables: HelloAceDB
-## OptionalDeps: Ace3
+## OptionalDeps: Ace3 # if a user wants to run Ace3 standalone
 
-# Ace3
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
 Libs\AceAddon-3.0\AceAddon-3.0.xml
