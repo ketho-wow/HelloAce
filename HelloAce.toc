@@ -1,6 +1,6 @@
 ## Interface: 90100
 ## Version: 1.0.0
-## Title: HelloAce
+## Title: Hello Ace
 ## Notes: Minimal example (with Ace3 libs hard embedded)
 ## Author: Ketho
 ## SavedVariables: HelloAceDB

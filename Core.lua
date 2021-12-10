@@ -58,5 +58,12 @@ function HelloAce:SlashCommand(input, editbox)
 		-- https://github.com/Stanzilla/WoWUIBugs/issues/89
 		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
 		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
+		--[[ or as a standalone window
+		if ACD.OpenFrames["HelloAce_Options"] then
+			ACD:Close("HelloAce_Options")
+		else
+			ACD:Open("HelloAce_Options")
+		end
+		]]
 	end
 end
