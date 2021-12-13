@@ -45,13 +45,15 @@ end
 function HelloAce:SlashCommand(input, editbox)
 	if input == "enable" then
 		self:Enable()
+		self:Print("Enabled.")
 	elseif input == "disable" then
 		-- unregisters all events and calls HelloAce:OnDisable() if you defined that
 		self:Disable()
+		self:Print("Disabled.")
 	elseif input == "message" then
 		print("this is our saved message:", self.db.profile.someInput)
 	else
-		self:Print("some useful help message")
+		self:Print("Some useful help message.")
 		-- https://github.com/Stanzilla/WoWUIBugs/issues/89
 		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
 		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
