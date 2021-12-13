@@ -1,6 +1,4 @@
--- we can mixin more Ace libs here
 HelloAce = LibStub("AceAddon-3.0"):NewAddon("HelloAce", "AceEvent-3.0", "AceConsole-3.0")
-
 local AC = LibStub("AceConfig-3.0")
 local ACD = LibStub("AceConfigDialog-3.0")
 
@@ -17,7 +15,7 @@ function HelloAce:OnInitialize()
 	-- adds a child options table, in this case our profiles panel
 	local profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db)
 	AC:RegisterOptionsTable("HelloAce_Profiles", profiles)
-	ACD:AddToBlizOptions("HelloAce_Profiles", "Profiles", "HelloAce_Options")
+	ACD:AddToBlizOptions("HelloAce_Profiles", "Profiles", "HelloAce (label 1)")
 
 	-- https://www.wowace.com/projects/ace3/pages/api/ace-console-3-0
 	self:RegisterChatCommand("ha", "SlashCommand")
@@ -36,7 +34,6 @@ function HelloAce:PLAYER_STARTED_MOVING(event)
 end
 
 function HelloAce:CHAT_MSG_CHANNEL(event, text, ...)
-	-- prints the whole event payload
 	print(event, text, ...)
 end
 
