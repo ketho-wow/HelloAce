@@ -8,7 +8,7 @@ function HelloAce:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("HelloAceDB", self.defaults, true)
 
 	-- registers an options table and adds it to the Blizzard options window
-	-- https://www.wowace.com/projects/ace3/pages/api/ace-config-registry-3-0
+	-- https://www.wowace.com/projects/ace3/pages/api/ace-config-3-0
 	AC:RegisterOptionsTable("HelloAce_Options", self.options)
 	self.optionsFrame = ACD:AddToBlizOptions("HelloAce_Options", "HelloAce (label 1)")
 
