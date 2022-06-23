@@ -8,8 +8,10 @@ Ace3 example with options panel and slash commands.
 ⚠️ If you downloaded it as a zip, rename the `HelloAce-master` folder to `HelloAce`
 
 ### About embeds
-The Ace3 libs are hard-embedded for simplicity. For how to soft-embed them, see [BigWigs: Preparing the PackageMeta File](https://github.com/BigWigsMods/packager/wiki/Preparing-the-PackageMeta-File).
+The Ace3 libs are hard-embedded (hardcoded) for simplicity.
 
-To still have a working dev setup you can either:
+When updating your addons it's recommended to have the packager pull the latest Ace3 libs when packaging, i.e. soft-embedding. This requires a [PackageMeta File](https://github.com/BigWigsMods/packager/wiki/Preparing-the-PackageMeta-File).
+
+To still have your own local Ace3 libs without checking them out to the repository:
 * Use the Ace3 libs standalone by dropping the [Ace3](https://www.wowace.com/projects/ace3) addon in the `AddOns` folder and specifying `## OptionalDeps: Ace3` in your TOC.
-* Or exclude your `Libs` folder from the repository with [.gitignore](https://git-scm.com/docs/gitignore).
+* Or put the Ace3 libs in the `Libs` folder and exclude it from the repository with [.gitignore](https://git-scm.com/docs/gitignore).

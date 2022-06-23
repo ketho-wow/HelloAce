@@ -31,9 +31,16 @@ HelloAce.options = {
 			set = "SetSomeRange",
 			min = 1, max = 10, step = 1,
 		},
+		someKeybinding = {
+			type = "keybinding",
+			order = 3,
+			name = "a keybinding",
+			get = "GetValue",
+			set = "SetValue",
+		},
 		group1 = {
 			type = "group",
-			order = 3,
+			order = 4,
 			name = "a group",
 			inline = true,
 			-- getters/setters can be inherited through the table tree
@@ -71,6 +78,7 @@ function HelloAce:SetSomeRange(info, value)
 	self.db.profile.someRange = value
 end
 
+-- for documentation on the info table
 -- https://www.wowace.com/projects/ace3/pages/ace-config-3-0-options-tables#title-4-1
 function HelloAce:GetValue(info)
 	return self.db.profile[info[#info]]
