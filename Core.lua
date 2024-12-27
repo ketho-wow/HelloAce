@@ -54,9 +54,7 @@ function HelloAce:SlashCommand(input, editbox)
 		print("this is our saved message:", self.db.profile.someInput)
 	else
 		self:Print("Some useful help message.")
-		-- https://github.com/Stanzilla/WoWUIBugs/issues/89
-		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
-		InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
+		Settings.OpenToCategory(self.optionsFrame.name)
 		--[[ or as a standalone window
 		if ACD.OpenFrames["HelloAce_Options"] then
 			ACD:Close("HelloAce_Options")
