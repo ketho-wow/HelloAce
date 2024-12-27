@@ -1,6 +1,6 @@
 Ace3 example with options panel and slash commands.
 - https://www.wowace.com/projects/ace3/pages/getting-started
-- https://wowpedia.fandom.com/wiki/Ace3_for_Dummies
+- https://warcraft.wiki.gg/wiki/Ace3_for_Dummies
 
 ![](https://github.com/ketho-wow/HelloAce/raw/master/preview.png)
 
