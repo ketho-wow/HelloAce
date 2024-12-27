@@ -1,5 +1,5 @@
-## Interface: 90205
-## Version: 1.0.1
+## Interface: 110007
+## Version: 1.0.2
 ## Title: Hello Ace
 ## Notes: Minimal example (with Ace3 libs hard embedded)
 ## Author: Ketho
